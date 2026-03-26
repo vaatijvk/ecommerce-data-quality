@@ -44,31 +44,7 @@ Most of these issues produce **no error messages** — the code runs, the result
 
 Every flag column is a simple `True`/`False` per row, making it easy to filter, count, and visualise affected rows.
 
----
 
-## 📁 Project Structure
-
-```
-ecommerce-data-quality/
-│
-├── notebooks/
-│   └── data_quality_audit.ipynb    ← Main Jupyter Notebook (run this)
-│
-├── data/
-│   └── .gitkeep                    ← Folder placeholder (raw data not committed)
-│
-├── outputs/
-│   └── dirty_ecommerce_flagged.csv ← Dataset with all FLAG_ columns added
-│
-├── TOOLKIT.md                      ← Full capstone toolkit document
-├── requirements.txt                ← Python dependencies
-├── .gitignore                      ← Excludes raw data and system files
-└── README.md                       ← This file
-```
-
-> **Note on data privacy:** Raw CSV files are excluded from this repository via `.gitignore`. Only the flagged output is committed.
-
----
 
 ## 🛠️ System Requirements
 
@@ -78,42 +54,6 @@ ecommerce-data-quality/
 | Python version | 3.8 or higher |
 | Editor | Jupyter Notebook or JupyterLab |
 | Key packages | pandas, numpy, matplotlib, seaborn |
-
----
-
-## ⚙️ Installation & Setup
-
-### 1. Download this repository
-
-Click the green **Code** button on this page → **Download ZIP** → extract the folder.
-
-### 2. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Add your dataset
-
-Place your CSV file in the `data/` folder, then open the notebook and update the file path in Cell 1:
-
-```python
-# Windows
-df = pd.read_csv(r"C:\Users\JUDITH\Downloads\dirty_ecommerce_dataset.csv")
-
-# Mac / Linux
-df = pd.read_csv("~/Downloads/dirty_ecommerce_dataset.csv")
-```
-
-> ⚠️ **Windows users:** Always use `r"..."` (raw string) before your file path. Without it, Python misreads backslashes like `\U` and `\D` as Unicode escape sequences and throws a `SyntaxError`.
-
-### 4. Launch Jupyter Notebook
-
-```bash
-jupyter notebook
-```
-
-Open `notebooks/data_quality_audit.ipynb` and run all cells top to bottom (**Kernel → Restart & Run All**).
 
 ---
 
@@ -206,6 +146,6 @@ df = pd.read_csv(r"C:\Users\JUDITH\Downloads\file.csv")
 
 ## 👩‍💻 Author
 
-**Judith** — Moringa School Data Science Track
+**Judith**
 
 *Built with Python, pandas, and a healthy suspicion of "clean-looking" data.*
